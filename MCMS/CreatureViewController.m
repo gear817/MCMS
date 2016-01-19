@@ -9,6 +9,7 @@
 #import "CreatureViewController.h"
 
 @interface CreatureViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.textField setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,21 +27,36 @@
 }
 - (IBAction)editButtonTapped:(UIBarButtonItem *)sender {
     
-    if (self.editing)
+    if ([sender.title isEqualToString: @"Edit"])
         {
-            self.editing = false;
-            [self. setEditing:false animated:true];
-            sender.style = UIBarButtonItemStylePlain;
-            sender.title = @"Edit";
-        }
-        else
-        {
-            self.editing = true;
-            [self.tableView setEditing:true animated:true];
-            sender.title = @"Done";
-            sender.style =  UIBarButtonItemStyleDone;
-        }
-        [self.tableView reloadData];
+            [sender setTitle:@"Done"];
+            [self.textField setHidden:NO];
+            NSString *string = [NSString stringWithFormat:@"%@", self.textField];
+            [self.navigationItem.title. = [NSString stringWithFormat:@"%@", string]];
+                   } else {
+            [sender setTitle:@"Edit"];
+           [self.textField setHidden:YES];
+
+            
+        };
+    
+
+    
+            
+            
+           
+//            [self setEditing:false animated:true];
+//            sender.style = UIBarButtonItemStylePlain;
+//            sender.title = @"Edit";
+//        }
+//        else
+//        {
+//            self.editing = true;
+//            [self setEditing:true animated:true];
+//            sender.title = @"Done";
+//            sender.style =  UIBarButtonItemStyleDone;
+//        }
+//        [self.view reloadData];
 
 
 }

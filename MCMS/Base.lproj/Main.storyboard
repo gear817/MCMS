@@ -119,40 +119,42 @@
                     <view key="view" contentMode="scaleToFill" id="aAG-9y-cH2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-TY-Ocx">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="85" width="360" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vJp-TY-Ocx"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vJp-TY-Ocx"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="lfC-fC-FOE">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="P9K-8u-G2x">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xOd-E2-UpJ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8Ri-Ss-4SR"/>
-                                    <constraint firstAttribute="width" constant="30" id="mjw-aT-DTP"/>
-                                </constraints>
-                                <state key="normal" title="Edit"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8Ri-Ss-4SR"/>
-                                        <exclude reference="mjw-aT-DTP"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="8Ri-Ss-4SR"/>
-                                        <include reference="mjw-aT-DTP"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="editButtonTapped:" destination="WcB-U5-nBx" eventType="touchUpInside" id="vmb-Ya-oVh"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="YIT-bk-Oew">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="WcB-U5-nBx" id="C0Z-W1-HGZ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="vJp-TY-Ocx" id="4EM-VH-kal"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLL-Ef-7iK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1817" y="1012"/>
+            <point key="canvasLocation" x="1816.5" y="1012"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="01y-Ne-QaB">
