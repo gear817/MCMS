@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IJO-tJ-lMM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IJO-tJ-lMM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PMR-pS-LcK">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="91" width="600" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellID" id="GOI-74-16C">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GOI-74-16C" id="Crt-py-1eg">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -35,17 +36,74 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="f1B-Wl-2fq"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMb-VH-8sw">
+                                <rect key="frame" x="553" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="0hL-2F-4fd"/>
+                                    <constraint firstAttribute="height" constant="30" id="2BZ-Ax-bC1"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addButtonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qz4-UP-MW0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UEb-m8-f0e">
+                                <rect key="frame" x="0.0" y="64" width="522" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="PzM-Ik-9gI"/>
+                                    <constraint firstAttribute="width" constant="522" id="wzc-Pv-tAq"/>
+                                    <constraint firstAttribute="height" constant="30" id="z2F-zn-xx9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PzM-Ik-9gI"/>
+                                        <exclude reference="z2F-zn-xx9"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="PzM-Ik-9gI"/>
+                                        <exclude reference="wzc-Pv-tAq"/>
+                                        <include reference="z2F-zn-xx9"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZMb-VH-8sw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="D5l-N6-y8T"/>
+                            <constraint firstItem="UEb-m8-f0e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IWK-oa-Akr"/>
+                            <constraint firstItem="UEb-m8-f0e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="QCj-wo-cSb"/>
+                            <constraint firstItem="ZMb-VH-8sw" firstAttribute="leading" secondItem="UEb-m8-f0e" secondAttribute="trailing" constant="8" id="Tzu-rc-rEl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZMb-VH-8sw" secondAttribute="trailing" constant="-3" id="UkP-Y3-ml3"/>
+                            <constraint firstItem="UEb-m8-f0e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="cuf-Pb-0W5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cuf-Pb-0W5"/>
+                                <exclude reference="Tzu-rc-rEl"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="IWK-oa-Akr"/>
+                                <exclude reference="QCj-wo-cSb"/>
+                                <include reference="cuf-Pb-0W5"/>
+                                <include reference="Tzu-rc-rEl"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="JWg-y8-kh4"/>
                     <connections>
                         <outlet property="tableView" destination="PMR-pS-LcK" id="07U-Ts-wGd"/>
+                        <outlet property="textField" destination="UEb-m8-f0e" id="Z9C-3C-TqX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="1012"/>
+            <point key="canvasLocation" x="1045.5" y="1012"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="01y-Ne-QaB">

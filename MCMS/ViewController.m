@@ -10,6 +10,7 @@
 #import "MagicalCreature.h"
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property NSMutableArray *creatures;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
@@ -27,6 +28,14 @@
 }
 
 
+
+
+- (IBAction)addButtonTaped:(UIButton *)sender {
+    [self.creatures addObject:self.textField.text];
+    self.textField.text = @"";
+    [self.view endEditing:YES];
+    [self.tableView reloadData];
+}
 
 
 
