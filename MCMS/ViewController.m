@@ -11,7 +11,6 @@
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property NSMutableArray *creatures;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @end
 
 @implementation ViewController
@@ -38,10 +37,10 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
-    Dragon *dragon = [self.dragons objectAtIndex:indexPath.row];
-    cell.textLabel.text = dragon.dragonName;
-//    cell.detailTextLabel.text = dragon.swag;
+    MagicalCreature *creature = [self.creatures objectAtIndex:indexPath.row];
+    cell.textLabel.text = creature.name;
     return cell;
+}
 
 
 

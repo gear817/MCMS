@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
--(instancetype)initWithName:(NSString *)name;
+//-(instancetype)initWithName:(NSString *)name;
 
 @end
 
