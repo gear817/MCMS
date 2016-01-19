@@ -64,15 +64,15 @@
 		305991691C4EC30B00A79A45 /* MCMS */ = {
 			isa = PBXGroup;
 			children = (
-				305991811C4EC36500A79A45 /* MagicalCreature.h */,
-				305991821C4EC36500A79A45 /* MagicalCreature.m */,
 				3059916D1C4EC30B00A79A45 /* AppDelegate.h */,
 				3059916E1C4EC30B00A79A45 /* AppDelegate.m */,
+				305991811C4EC36500A79A45 /* MagicalCreature.h */,
+				305991821C4EC36500A79A45 /* MagicalCreature.m */,
 				305991701C4EC30B00A79A45 /* ViewController.h */,
 				305991711C4EC30B00A79A45 /* ViewController.m */,
-				305991731C4EC30B00A79A45 /* Main.storyboard */,
 				305991841C4EE07500A79A45 /* CreatureViewController.h */,
 				305991851C4EE07500A79A45 /* CreatureViewController.m */,
+				305991731C4EC30B00A79A45 /* Main.storyboard */,
 				305991761C4EC30B00A79A45 /* Assets.xcassets */,
 				305991781C4EC30B00A79A45 /* LaunchScreen.storyboard */,
 				3059917B1C4EC30B00A79A45 /* Info.plist */,
@@ -311,6 +311,7 @@
 				305991801C4EC30B00A79A45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -23,15 +23,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)editButtonTapped:(UIBarButtonItem *)sender {
+    
+    if (self.editing)
+        {
+            self.editing = false;
+            [self. setEditing:false animated:true];
+            sender.style = UIBarButtonItemStylePlain;
+            sender.title = @"Edit";
+        }
+        else
+        {
+            self.editing = true;
+            [self.tableView setEditing:true animated:true];
+            sender.title = @"Done";
+            sender.style =  UIBarButtonItemStyleDone;
+        }
+        [self.tableView reloadData];
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
 
 @end

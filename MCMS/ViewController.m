@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MagicalCreature.h"
+#import "CreatureViewController.h"
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property NSMutableArray *creatures;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -53,6 +54,14 @@
     return cell;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    CreatureViewController *destination = [segue destinationViewController];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    destination.title = [[self.creatures objectAtIndex:indexPath.row]name];
+    MagicalCreature *creature = [self.creatures objectAtIndex:indexPath.row];
+    destination.creature = creature;
+    
+}
 
 
 
