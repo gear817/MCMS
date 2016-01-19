@@ -13,6 +13,7 @@
 		305991751C4EC30B00A79A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305991731C4EC30B00A79A45 /* Main.storyboard */; };
 		305991771C4EC30B00A79A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305991761C4EC30B00A79A45 /* Assets.xcassets */; };
 		3059917A1C4EC30B00A79A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305991781C4EC30B00A79A45 /* LaunchScreen.storyboard */; };
+		305991831C4EC36500A79A45 /* MagicalCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 305991821C4EC36500A79A45 /* MagicalCreature.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		305991761C4EC30B00A79A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		305991791C4EC30B00A79A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3059917B1C4EC30B00A79A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305991811C4EC36500A79A45 /* MagicalCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MagicalCreature.h; path = ../MagicalCreature.h; sourceTree = "<group>"; };
+		305991821C4EC36500A79A45 /* MagicalCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MagicalCreature.m; path = ../MagicalCreature.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		305991691C4EC30B00A79A45 /* MCMS */ = {
 			isa = PBXGroup;
 			children = (
+				305991811C4EC36500A79A45 /* MagicalCreature.h */,
+				305991821C4EC36500A79A45 /* MagicalCreature.m */,
 				3059916D1C4EC30B00A79A45 /* AppDelegate.h */,
 				3059916E1C4EC30B00A79A45 /* AppDelegate.m */,
 				305991701C4EC30B00A79A45 /* ViewController.h */,
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				305991721C4EC30B00A79A45 /* ViewController.m in Sources */,
+				305991831C4EC36500A79A45 /* MagicalCreature.m in Sources */,
 				3059916F1C4EC30B00A79A45 /* AppDelegate.m in Sources */,
 				3059916C1C4EC30B00A79A45 /* main.m in Sources */,
 			);

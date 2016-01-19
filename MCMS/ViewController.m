@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
+#import "MagicalCreature.h"
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@property NSMutableArray *creatures;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -17,11 +19,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    MagicalCreature *creatureOne = [[MagicalCreature alloc] initWithName:@"Daniel"];
+    MagicalCreature *creatureTwo = [[MagicalCreature alloc] initWithName:@"Lilly"];
+    MagicalCreature *creatureThree = [[MagicalCreature alloc] initWithName:@"Miguel"];
+    
+    self.creatures = [NSMutableArray arrayWithObjects:creatureOne, creatureTwo, creatureThree, nil];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.creatures.count;
 }
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
+    Dragon *dragon = [self.dragons objectAtIndex:indexPath.row];
+    cell.textLabel.text = dragon.dragonName;
+//    cell.detailTextLabel.text = dragon.swag;
+    return cell;
+
+
+
+
+
 
 @end
