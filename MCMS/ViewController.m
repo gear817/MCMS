@@ -31,14 +31,16 @@
 
 
 - (IBAction)addButtonTaped:(UIButton *)sender {
-    [self.creatures addObject:self.textField.text];
+    MagicalCreature *mc = [[MagicalCreature alloc]initWithName:self.textField.text];
+    [self.creatures addObject:mc];
     self.textField.text = @"";
     [self.view endEditing:YES];
     [self.tableView reloadData];
+    
 }
 
 
-
+#pragma delagetes
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.creatures.count;
